@@ -118,7 +118,7 @@ html, body {
 /* ---------- Layout ---------- */
 .layout {
   display: grid;
-  grid-template-columns: 240px 1fr;
+  grid-template-columns: 280px 1fr;
   gap: 0;
   min-height: calc(100vh - 60px);
 }
@@ -173,6 +173,19 @@ html, body {
   font-size: 11px;
   color: var(--text-dim);
 }
+
+.select-all-btn {
+  background: transparent;
+  border: 0;
+  padding: 0 0 8px;
+  font: inherit;
+  font-size: 11px;
+  color: var(--accent);
+  cursor: pointer;
+  display: block;
+  text-align: left;
+}
+.select-all-btn:hover { color: var(--accent-active); }
 
 .reset {
   background: transparent;

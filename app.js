@@ -68,8 +68,33 @@
         },
       }));
     });
+    attachSelectAll("pla-filters", state.typesByCategory.PLA);
     fillTypeList("pla-filters", state.typesByCategory.PLA);
+    attachSelectAll("petg-filters", state.typesByCategory.PETG);
     fillTypeList("petg-filters", state.typesByCategory.PETG);
+  }
+
+  function attachSelectAll(listElemId, types) {
+    const heading = document.getElementById(listElemId).closest(".filter-group").querySelector("h2");
+    const existing = document.getElementById(listElemId + "-all");
+    if (existing) existing.remove();
+    const allChecked = types.every(t => state.selectedTypes.has(t));
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.id = listElemId + "-all";
+    btn.className = "select-all-btn";
+    btn.textContent = allChecked ? "Deselect all" : "Select all";
+    btn.addEventListener("click", () => {
+      const nowAll = types.every(t => state.selectedTypes.has(t));
+      types.forEach(t => {
+        if (nowAll) state.selectedTypes.delete(t);
+        else state.selectedTypes.add(t);
+      });
+      fillTypeList(listElemId, types);
+      updateSelectAllState(listElemId, types);
+      render();
+    });
+    heading.insertAdjacentElement("afterend", btn);
   }
 
   function fillTypeList(elemId, types) {
@@ -78,14 +103,23 @@
     types.forEach(t => {
       const count = state.filaments.filter(f => f.type === t).length;
       list.appendChild(makeCheckbox({
-        label: t, count, checked: true,
+        label: t, count, checked: state.selectedTypes.has(t),
         onChange: e => {
           if (e.target.checked) state.selectedTypes.add(t);
           else state.selectedTypes.delete(t);
+          updateSelectAllState(elemId, types);
           render();
         },
       }));
     });
+  }
+
+  function updateSelectAllState(elemId, types) {
+    const controlId = elemId + "-all";
+    const allChecked = types.every(t => state.selectedTypes.has(t));
+    const noneChecked = types.every(t => !state.selectedTypes.has(t));
+    const link = document.getElementById(controlId);
+    if (link) link.textContent = allChecked ? "Deselect all" : "Select all";
   }
 
   function makeCheckbox({ label, count, checked, onChange }) {
@@ -132,6 +166,8 @@
       state.search = "";
       document.getElementById("search").value = "";
       buildFilters();
+      updateSelectAllState("pla-filters", state.typesByCategory.PLA);
+      updateSelectAllState("petg-filters", state.typesByCategory.PETG);
       render();
     });
 
@@ -250,18 +286,22 @@
 
   function badgeFor(rec) {
     let label = null;
-    switch (rec.finish) {
-      case "silk": label = "silk"; break;
-      case "silk-multi": label = "silk"; break;
-      case "matte-multi": label = "dual"; break;
-      case "cf": label = "CF"; break;
-      case "wood": label = "wood"; break;
-      case "marble": label = "marble"; break;
-      case "galaxy": label = "galaxy"; break;
-      case "sparkle": label = "sparkle"; break;
-      case "metal": label = "metallic"; break;
-      case "glow": label = "glow"; break;
-      case "translucent": label = "translucent"; break;
+    if (rec.finish && rec.finish.startsWith("gradient-")) {
+      label = "gradient";
+    } else {
+      switch (rec.finish) {
+        case "silk": label = "silk"; break;
+        case "silk-multi": label = "silk"; break;
+        case "matte-multi": label = "dual"; break;
+        case "cf": label = "CF"; break;
+        case "wood": label = "wood"; break;
+        case "marble": label = "marble"; break;
+        case "galaxy": label = "galaxy"; break;
+        case "sparkle": label = "sparkle"; break;
+        case "metal": label = "metallic"; break;
+        case "glow": label = "glow"; break;
+        case "translucent": label = "translucent"; break;
+      }
     }
     if (!label) return null;
     const b = document.createElement("span");

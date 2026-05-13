@@ -3416,6 +3416,142 @@
         "#EEDC48"
       ],
       "finish": "gradient-luminous"
+    },
+    {
+      "id": "bl-pla-basic-beige",
+      "brand": "Bambu Lab",
+      "type": "PLA Basic",
+      "name": "Beige",
+      "hex": "#F7E6DE",
+      "finish": "solid"
+    },
+    {
+      "id": "bl-pla-basic-gold",
+      "brand": "Bambu Lab",
+      "type": "PLA Basic",
+      "name": "Gold",
+      "hex": "#E4BD68",
+      "finish": "solid"
+    },
+    {
+      "id": "bl-pla-basic-silver",
+      "brand": "Bambu Lab",
+      "type": "PLA Basic",
+      "name": "Silver",
+      "hex": "#A6A9AA",
+      "finish": "solid"
+    },
+    {
+      "id": "bl-pla-basic-bronze",
+      "brand": "Bambu Lab",
+      "type": "PLA Basic",
+      "name": "Bronze",
+      "hex": "#847D48",
+      "finish": "solid"
+    },
+    {
+      "id": "bl-pla-basic-brown",
+      "brand": "Bambu Lab",
+      "type": "PLA Basic",
+      "name": "Brown",
+      "hex": "#9D432C",
+      "finish": "solid"
+    },
+    {
+      "id": "bl-pla-basic-maroon-red",
+      "brand": "Bambu Lab",
+      "type": "PLA Basic",
+      "name": "Maroon Red",
+      "hex": "#9D2235",
+      "finish": "solid"
+    },
+    {
+      "id": "bl-pla-basic-magenta",
+      "brand": "Bambu Lab",
+      "type": "PLA Basic",
+      "name": "Magenta",
+      "hex": "#EC008C",
+      "finish": "solid"
+    },
+    {
+      "id": "bl-pla-basic-pink",
+      "brand": "Bambu Lab",
+      "type": "PLA Basic",
+      "name": "Pink",
+      "hex": "#F55A74",
+      "finish": "solid"
+    },
+    {
+      "id": "bl-pla-basic-orange",
+      "brand": "Bambu Lab",
+      "type": "PLA Basic",
+      "name": "Orange",
+      "hex": "#FF6A13",
+      "finish": "solid"
+    },
+    {
+      "id": "bl-pla-basic-yellow",
+      "brand": "Bambu Lab",
+      "type": "PLA Basic",
+      "name": "Yellow",
+      "hex": "#F4EE2A",
+      "finish": "solid"
+    },
+    {
+      "id": "bl-pla-basic-bright-green",
+      "brand": "Bambu Lab",
+      "type": "PLA Basic",
+      "name": "Bright Green",
+      "hex": "#BECF00",
+      "finish": "solid"
+    },
+    {
+      "id": "bl-pla-basic-turquoise",
+      "brand": "Bambu Lab",
+      "type": "PLA Basic",
+      "name": "Turquoise",
+      "hex": "#00B1B7",
+      "finish": "solid"
+    },
+    {
+      "id": "bl-pla-basic-cobalt-blue",
+      "brand": "Bambu Lab",
+      "type": "PLA Basic",
+      "name": "Cobalt Blue",
+      "hex": "#0056B8",
+      "finish": "solid"
+    },
+    {
+      "id": "bl-pla-basic-purple",
+      "brand": "Bambu Lab",
+      "type": "PLA Basic",
+      "name": "Purple",
+      "hex": "#5E43B7",
+      "finish": "solid"
+    },
+    {
+      "id": "bl-pla-basic-blue-gray",
+      "brand": "Bambu Lab",
+      "type": "PLA Basic",
+      "name": "Blue Gray",
+      "hex": "#5B6579",
+      "finish": "solid"
+    },
+    {
+      "id": "bl-pla-basic-light-gray",
+      "brand": "Bambu Lab",
+      "type": "PLA Basic",
+      "name": "Light Gray",
+      "hex": "#D1D3D5",
+      "finish": "solid"
+    },
+    {
+      "id": "bl-pla-basic-dark-gray",
+      "brand": "Bambu Lab",
+      "type": "PLA Basic",
+      "name": "Dark Gray",
+      "hex": "#545454",
+      "finish": "solid"
     }
   ]
 }

@@ -2,6 +2,115 @@
   "use strict";
   const CU = window.ColorUtils;
 
+  /* Official store page for each filament type. Falls back to brand collection page. */
+  const TYPE_STORE_URL = {
+    // Bambu Lab — bambulab.com/en-us/product/<slug>
+    "PLA Basic":            "https://bambulab.com/en-us/product/pla-basic-color",
+    "PLA Matte":            "https://bambulab.com/en-us/product/pla-matte",
+    "PLA Silk+":            "https://bambulab.com/en-us/product/pla-silk-plus",
+    "PLA Silk Multi-Color": "https://bambulab.com/en-us/product/pla-silk-multi-color",
+    "PLA-CF":               "https://bambulab.com/en-us/product/pla-cf",
+    "PLA Wood":             "https://bambulab.com/en-us/product/pla-wood",
+    "PLA Marble":           "https://bambulab.com/en-us/product/pla-marble",
+    "PLA Galaxy":           "https://bambulab.com/en-us/product/pla-galaxy",
+    "PLA Glow":             "https://bambulab.com/en-us/product/pla-glow",
+    "PLA Sparkle":          "https://bambulab.com/en-us/product/pla-sparkle",
+    "PLA Metal":            "https://bambulab.com/en-us/product/pla-metal",
+    "PLA Translucent":      "https://bambulab.com/en-us/product/pla-translucent",
+    "PLA Tough+":           "https://bambulab.com/en-us/product/pla-tough-plus",
+    "PETG Basic":           "https://bambulab.com/en-us/product/petg-basic",
+    "PETG HF":              "https://bambulab.com/en-us/product/petg-hf",
+    "PETG-CF":              "https://bambulab.com/en-us/product/petg-cf",
+    "PETG Translucent":     "https://bambulab.com/en-us/product/petg-translucent",
+    // Polymaker Panchroma — shop.polymaker.com/products/<slug>
+    "Panchroma Basic PLA":               "https://shop.polymaker.com/products/panchroma-pla",
+    "Panchroma Matte PLA":               "https://shop.polymaker.com/products/panchroma-matte",
+    "Panchroma Silk PLA":                "https://shop.polymaker.com/products/panchroma-silk",
+    "Panchroma Satin PLA":               "https://shop.polymaker.com/products/panchroma-satin",
+    "Panchroma Neon PLA":                "https://shop.polymaker.com/products/panchroma-neon",
+    "Panchroma Luminous PLA":            "https://shop.polymaker.com/products/panchroma-luminous",
+    "Panchroma Starlight PLA":           "https://shop.polymaker.com/products/panchroma-starlight",
+    "Panchroma Celestial PLA":           "https://shop.polymaker.com/products/panchroma-celestial",
+    "Panchroma Galaxy PLA":              "https://shop.polymaker.com/products/panchroma-galaxy",
+    "Panchroma Glow PLA":                "https://shop.polymaker.com/products/panchroma-glow",
+    "Panchroma Marble PLA":              "https://shop.polymaker.com/products/panchroma-marble",
+    "Panchroma Metallic PLA":            "https://shop.polymaker.com/products/panchroma-metallic-pla",
+    "Panchroma Translucent PLA":         "https://shop.polymaker.com/products/panchroma-translucent",
+    "Panchroma Dual Silk PLA":           "https://shop.polymaker.com/products/panchroma-dual-silk",
+    "Panchroma Dual Matte PLA":          "https://shop.polymaker.com/products/panchroma-dual-matte",
+    "Panchroma Dual Special PLA":        "https://shop.polymaker.com/products/panchroma-dual-matte",
+    "Panchroma UV Shift PLA":            "https://shop.polymaker.com/collections/panchroma",
+    "Panchroma CoPE (PETG-alt)":         "https://shop.polymaker.com/products/panchroma-cope",
+    "Panchroma Gradient Matte PLA":      "https://shop.polymaker.com/products/panchroma-gradient-matte",
+    "Panchroma Gradient Silk PLA":       "https://shop.polymaker.com/products/panchroma-gradient-silk",
+    "Panchroma Gradient Satin PLA":      "https://shop.polymaker.com/products/panchroma-gradient-satin",
+    "Panchroma Gradient Translucent PLA":"https://shop.polymaker.com/products/panchroma-gradient-translucent",
+    "Panchroma Gradient Galaxy PLA":     "https://shop.polymaker.com/products/panchroma-gradient-galaxy",
+    "Panchroma Gradient Celestial PLA":  "https://shop.polymaker.com/products/panchroma-gradient-celestial",
+    "Panchroma Gradient Crystal PLA":    "https://shop.polymaker.com/products/panchroma-gradient-crystal",
+    "Panchroma Gradient Starlight PLA":  "https://shop.polymaker.com/products/panchroma-gradient-starlight",
+    "Panchroma Gradient Neon PLA":       "https://shop.polymaker.com/collections/panchroma-gradient-pla",
+    "Panchroma Gradient Luminous PLA":   "https://shop.polymaker.com/collections/panchroma-gradient-pla",
+  };
+
+  const BRAND_STORE_URL = {
+    "Bambu Lab":  "https://bambulab.com/en-us/filament",
+    "Polymaker":  "https://shop.polymaker.com/collections/panchroma",
+  };
+
+  function storeUrlFor(rec) {
+    return TYPE_STORE_URL[rec.type] || BRAND_STORE_URL[rec.brand] || null;
+  }
+
+  /* Maps every raw type string → a unified display group label. */
+  const TYPE_TO_GROUP = {
+    "PLA Basic":                             "Basic",
+    "Panchroma Basic PLA":                   "Basic",
+    "PLA Matte":                             "Matte",
+    "Panchroma Matte PLA":                   "Matte",
+    "PLA Silk+":                             "Silk",
+    "Panchroma Silk PLA":                    "Silk",
+    "PLA Silk Multi-Color":                  "Silk Dual / Multi",
+    "Panchroma Dual Silk PLA":               "Silk Dual / Multi",
+    "PLA Marble":                            "Marble",
+    "Panchroma Marble PLA":                  "Marble",
+    "PLA Galaxy":                            "Galaxy",
+    "Panchroma Galaxy PLA":                  "Galaxy",
+    "PLA Glow":                              "Glow",
+    "Panchroma Glow PLA":                    "Glow",
+    "PLA Translucent":                       "Translucent",
+    "Panchroma Translucent PLA":             "Translucent",
+    "PLA Metal":                             "Metallic",
+    "Panchroma Metallic PLA":                "Metallic",
+    "PLA-CF":                                "CF",
+    "PLA Wood":                              "Wood",
+    "PLA Sparkle":                           "Sparkle",
+    "PLA Tough+":                            "Tough+",
+    "Panchroma Satin PLA":                   "Satin",
+    "Panchroma Neon PLA":                    "Neon",
+    "Panchroma Luminous PLA":                "Luminous",
+    "Panchroma Starlight PLA":               "Starlight",
+    "Panchroma Celestial PLA":               "Celestial",
+    "Panchroma Dual Matte PLA":              "Dual Matte",
+    "Panchroma Dual Special PLA":            "Dual Special",
+    "Panchroma UV Shift PLA":                "UV Shift",
+    "Panchroma Gradient Matte PLA":          "Gradient Matte",
+    "Panchroma Gradient Silk PLA":           "Gradient Silk",
+    "Panchroma Gradient Satin PLA":          "Gradient Satin",
+    "Panchroma Gradient Translucent PLA":    "Gradient Translucent",
+    "Panchroma Gradient Galaxy PLA":         "Gradient Galaxy",
+    "Panchroma Gradient Celestial PLA":      "Gradient Celestial",
+    "Panchroma Gradient Crystal PLA":        "Gradient Crystal",
+    "Panchroma Gradient Starlight PLA":      "Gradient Starlight",
+    "Panchroma Gradient Neon PLA":           "Gradient Neon",
+    "Panchroma Gradient Luminous PLA":       "Gradient Luminous",
+    "PETG Basic":                            "Basic",
+    "PETG HF":                               "HF",
+    "PETG-CF":                               "CF",
+    "PETG Translucent":                      "Translucent",
+    "Panchroma CoPE (PETG-alt)":             "CoPE",
+  };
+
   /* --- State --- */
   const state = {
     filaments: [],
@@ -10,6 +119,8 @@
     typesByCategory: { PLA: [], PETG: [] },
     selectedBrands: new Set(),
     selectedTypes: new Set(),
+    satRange: [0, 100],
+    litRange: [0, 100],
     sortMode: "hue",       // "hue" | "brand"
     search: "",
     activeId: null,
@@ -51,6 +162,19 @@
 
   function isPetgType(t) {
     return /petg|cope/i.test(t);
+  }
+
+  /* Groups an array of raw type strings by their display label, sorted alphabetically. */
+  function buildTypeGroups(types) {
+    const seen = new Map();
+    for (const t of types) {
+      const g = TYPE_TO_GROUP[t] || t;
+      if (!seen.has(g)) seen.set(g, []);
+      seen.get(g).push(t);
+    }
+    return Array.from(seen.entries())
+      .sort((a, b) => a[0].localeCompare(b[0]))
+      .map(([group, rawTypes]) => ({ group, rawTypes }));
   }
 
   /* --- Filters UI --- */
@@ -100,13 +224,16 @@
   function fillTypeList(elemId, types) {
     const list = document.getElementById(elemId);
     list.innerHTML = "";
-    types.forEach(t => {
-      const count = state.filaments.filter(f => f.type === t).length;
+    buildTypeGroups(types).forEach(({ group, rawTypes }) => {
+      const count = state.filaments.filter(f => rawTypes.includes(f.type)).length;
+      const allChecked = rawTypes.every(t => state.selectedTypes.has(t));
       list.appendChild(makeCheckbox({
-        label: t, count, checked: state.selectedTypes.has(t),
+        label: group, count, checked: allChecked,
         onChange: e => {
-          if (e.target.checked) state.selectedTypes.add(t);
-          else state.selectedTypes.delete(t);
+          rawTypes.forEach(t => {
+            if (e.target.checked) state.selectedTypes.add(t);
+            else state.selectedTypes.delete(t);
+          });
           updateSelectAllState(elemId, types);
           render();
         },
@@ -139,6 +266,36 @@
     return li;
   }
 
+  /* --- Range slider helpers --- */
+  function bindRangeSlider(minId, maxId, fillId, minLabelId, maxLabelId, onChange) {
+    const minEl = document.getElementById(minId);
+    const maxEl = document.getElementById(maxId);
+
+    function sync() {
+      let lo = parseInt(minEl.value, 10);
+      let hi = parseInt(maxEl.value, 10);
+      if (lo > hi) { lo = hi; minEl.value = lo; }
+      syncRangeSlider(minId, maxId, fillId, minLabelId, maxLabelId, lo, hi);
+      minEl.style.zIndex = lo >= hi - 2 ? "5" : "3";
+      maxEl.style.zIndex = "4";
+      onChange(lo, hi);
+    }
+
+    minEl.addEventListener("input", sync);
+    maxEl.addEventListener("input", sync);
+    sync();
+  }
+
+  function syncRangeSlider(minId, maxId, fillId, minLabelId, maxLabelId, lo, hi) {
+    document.getElementById(minId).value = lo;
+    document.getElementById(maxId).value = hi;
+    const fill = document.getElementById(fillId);
+    fill.style.left = lo + "%";
+    fill.style.right = (100 - hi) + "%";
+    document.getElementById(minLabelId).textContent = lo + "%";
+    document.getElementById(maxLabelId).textContent = hi + "%";
+  }
+
   /* --- Events --- */
   function bindEvents() {
     // Sort toggle
@@ -163,8 +320,12 @@
     document.getElementById("reset-filters").addEventListener("click", () => {
       state.selectedBrands = new Set(state.brands);
       state.selectedTypes = new Set(state.types);
+      state.satRange = [0, 100];
+      state.litRange = [0, 100];
       state.search = "";
       document.getElementById("search").value = "";
+      syncRangeSlider("sat-min", "sat-max", "sat-fill", "sat-min-val", "sat-max-val", 0, 100);
+      syncRangeSlider("lit-min", "lit-max", "lit-fill", "lit-min-val", "lit-max-val", 0, 100);
       buildFilters();
       updateSelectAllState("pla-filters", state.typesByCategory.PLA);
       updateSelectAllState("petg-filters", state.typesByCategory.PETG);
@@ -179,6 +340,12 @@
       filterToggle.setAttribute("aria-expanded", open ? "true" : "false");
     });
 
+    // Range sliders
+    bindRangeSlider("sat-min", "sat-max", "sat-fill", "sat-min-val", "sat-max-val",
+      (lo, hi) => { state.satRange = [lo, hi]; render(); });
+    bindRangeSlider("lit-min", "lit-max", "lit-fill", "lit-min-val", "lit-max-val",
+      (lo, hi) => { state.litRange = [lo, hi]; render(); });
+
     // Drawer close
     document.getElementById("drawer-close").addEventListener("click", closeDrawer);
     document.getElementById("drawer-scrim").addEventListener("click", closeDrawer);
@@ -192,6 +359,8 @@
     return state.filaments.filter(f => {
       if (!state.selectedBrands.has(f.brand)) return false;
       if (!state.selectedTypes.has(f.type)) return false;
+      if (f.hsl.s < state.satRange[0] || f.hsl.s > state.satRange[1]) return false;
+      if (f.hsl.l < state.litRange[0] || f.hsl.l > state.litRange[1]) return false;
       if (state.search && !f.name.toLowerCase().includes(state.search) &&
           !f.type.toLowerCase().includes(state.search) &&
           !f.brand.toLowerCase().includes(state.search)) return false;
@@ -331,6 +500,17 @@
     subtitle.className = "brand-type";
     subtitle.textContent = `${rec.brand} · ${rec.type}`;
     content.appendChild(subtitle);
+
+    const url = storeUrlFor(rec);
+    if (url) {
+      const link = document.createElement("a");
+      link.className = "store-link";
+      link.href = url;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.textContent = "View in store →";
+      content.appendChild(link);
+    }
 
     const big = document.createElement("div");
     big.className = "big-swatch";

@@ -29,16 +29,40 @@
   <div class="layout">
     <aside class="sidebar" id="sidebar" aria-label="Filters">
       <section class="filter-group">
+        <h2>Saturation</h2>
+        <div class="dual-range-wrap">
+          <div class="dual-range-track"><div class="dual-range-fill" id="sat-fill"></div></div>
+          <input type="range" id="sat-min" class="dual-range-input" min="0" max="100" value="0" step="1" aria-label="Minimum saturation">
+          <input type="range" id="sat-max" class="dual-range-input" min="0" max="100" value="100" step="1" aria-label="Maximum saturation">
+        </div>
+        <div class="range-vals">
+          <span id="sat-min-val">0%</span>
+          <span id="sat-max-val">100%</span>
+        </div>
+      </section>
+      <section class="filter-group">
+        <h2>Lightness</h2>
+        <div class="dual-range-wrap">
+          <div class="dual-range-track"><div class="dual-range-fill" id="lit-fill"></div></div>
+          <input type="range" id="lit-min" class="dual-range-input" min="0" max="100" value="0" step="1" aria-label="Minimum lightness">
+          <input type="range" id="lit-max" class="dual-range-input" min="0" max="100" value="100" step="1" aria-label="Maximum lightness">
+        </div>
+        <div class="range-vals">
+          <span id="lit-min-val">0%</span>
+          <span id="lit-max-val">100%</span>
+        </div>
+      </section>
+      <section class="filter-group">
         <h2>Brand</h2>
         <ul id="brand-filters" class="checklist"></ul>
       </section>
       <section class="filter-group">
-        <h2>PLA types</h2>
-        <ul id="pla-filters" class="checklist"></ul>
-      </section>
-      <section class="filter-group">
         <h2>PETG types</h2>
         <ul id="petg-filters" class="checklist"></ul>
+      </section>
+      <section class="filter-group">
+        <h2>PLA types</h2>
+        <ul id="pla-filters" class="checklist"></ul>
       </section>
       <section class="filter-group">
         <button type="button" id="reset-filters" class="reset">Reset filters</button>

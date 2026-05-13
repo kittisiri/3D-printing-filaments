@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>3D Printing Filament Color Explorer</title>
+  <meta name="description" content="Browse and compare every Bambu Lab and Polymaker Panchroma PLA/PETG filament color, sorted by hue." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-left">
+      <h1>Filament Color Explorer</h1>
+      <p class="subtitle">Bambu Lab &amp; Polymaker Panchroma &mdash; PLA &amp; PETG, sorted by hue</p>
+    </div>
+    <div class="topbar-right">
+      <label class="search">
+        <span class="visually-hidden">Search colors</span>
+        <input id="search" type="search" placeholder="Search by name&hellip;" autocomplete="off" />
+      </label>
+      <div class="sort-toggle" role="radiogroup" aria-label="Sort mode">
+        <button type="button" role="radio" aria-checked="true" data-sort="hue" class="active">Interleaved by hue</button>
+        <button type="button" role="radio" aria-checked="false" data-sort="brand">Grouped by brand</button>
+      </div>
+      <button type="button" class="filter-toggle" id="filter-toggle" aria-expanded="false" aria-controls="sidebar">Filters</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" aria-label="Filters">
+      <section class="filter-group">
+        <h2>Brand</h2>
+        <ul id="brand-filters" class="checklist"></ul>
+      </section>
+      <section class="filter-group">
+        <h2>PLA types</h2>
+        <ul id="pla-filters" class="checklist"></ul>
+      </section>
+      <section class="filter-group">
+        <h2>PETG types</h2>
+        <ul id="petg-filters" class="checklist"></ul>
+      </section>
+      <section class="filter-group">
+        <button type="button" id="reset-filters" class="reset">Reset filters</button>
+      </section>
+    </aside>
+
+    <main class="main">
+      <div class="status-bar">
+        <span id="result-count">Loading&hellip;</span>
+      </div>
+      <div id="grid" class="grid" role="list" aria-label="Filament swatches"></div>
+      <p id="empty" class="empty" hidden>No filaments match the current filters.</p>
+    </main>
+  </div>
+
+  <aside class="drawer" id="drawer" aria-hidden="true" aria-label="Filament details">
+    <button type="button" class="drawer-close" id="drawer-close" aria-label="Close details">&times;</button>
+    <div class="drawer-content" id="drawer-content"></div>
+  </aside>
+  <div class="drawer-scrim" id="drawer-scrim" hidden></div>
+
+  <footer class="footer">
+    <p>Hex values are manufacturer-published marketing approximations. Real prints will look different depending on finish and lighting. Data sourced from manufacturer product pages; see the <a href="README.md">README</a>.</p>
+  </footer>
+
+  <script src="color-utils.js?v=2"></script>
+  <script src="app.js?v=2"></script>
+</body>
+</html>

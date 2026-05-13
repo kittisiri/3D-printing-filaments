@@ -123,6 +123,22 @@ html, body {
   min-height: calc(100vh - 60px);
 }
 
+.sidebar-close {
+  display: none;
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  background: transparent;
+  border: 0;
+  color: var(--text-muted);
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 6px 10px;
+  z-index: 1;
+}
+.sidebar-close:hover { color: var(--text); }
+
 /* ---------- Sidebar ---------- */
 .sidebar {
   background: var(--bg-sidebar);
@@ -174,6 +190,62 @@ html, body {
   color: var(--text-muted);
 }
 
+/* ---------- Gradient grouped row ---------- */
+.group-row {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.group-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  cursor: pointer;
+  color: var(--text);
+  font-size: 13px;
+  padding: 3px 4px;
+  border-radius: 4px;
+  transition: background var(--transition);
+}
+.group-label:hover { background: rgba(0, 0, 0, 0.05); }
+.group-label input[type="checkbox"] {
+  accent-color: var(--accent-active);
+  width: 14px; height: 14px;
+  cursor: pointer;
+}
+.group-label .count {
+  margin-left: auto;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+.group-chevron {
+  background: transparent;
+  border: 0;
+  color: var(--text-muted);
+  font-size: 10px;
+  padding: 4px 6px;
+  cursor: pointer;
+  line-height: 1;
+  border-radius: 3px;
+  flex-shrink: 0;
+  transition: color var(--transition), transform var(--transition);
+}
+.group-chevron:hover { color: var(--text); }
+.group-chevron.open { transform: rotate(90deg); }
+.nested-checklist {
+  list-style: none;
+  margin: 2px 0 0 22px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 280ms ease;
+}
+.nested-checklist.open { max-height: 500px; }
+
 .select-all-btn {
   background: transparent;
   border: 0;
@@ -208,7 +280,7 @@ html, body {
 }
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(192px, 1fr));
   gap: 14px;
 }
 .grid-section-heading {
@@ -590,6 +662,7 @@ html, body {
   }
   .sidebar.open { transform: translateX(0); }
   .filter-toggle { display: inline-flex; }
+  .sidebar-close { display: block; }
   .drawer { width: 90vw; max-width: 380px; }
 }
 @media (max-width: 480px) {

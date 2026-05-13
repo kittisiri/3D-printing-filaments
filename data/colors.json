@@ -3552,6 +3552,1011 @@
       "name": "Dark Gray",
       "hex": "#545454",
       "finish": "solid"
+    },
+    {
+      "id": "esun-epla-plus-black",
+      "brand": "eSUN",
+      "type": "ePLA+",
+      "name": "Black",
+      "hex": "#373838",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epla-plus-cold-white",
+      "brand": "eSUN",
+      "type": "ePLA+",
+      "name": "Cold White",
+      "hex": "#E1E4E5",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epla-plus-bone-white",
+      "brand": "eSUN",
+      "type": "ePLA+",
+      "name": "Bone White",
+      "hex": "#C2BAA7",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epla-plus-milky-white",
+      "brand": "eSUN",
+      "type": "ePLA+",
+      "name": "Milky White",
+      "hex": "#E8E4DC",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epla-plus-grey",
+      "brand": "eSUN",
+      "type": "ePLA+",
+      "name": "Grey",
+      "hex": "#697480",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epla-plus-silver",
+      "brand": "eSUN",
+      "type": "ePLA+",
+      "name": "Silver",
+      "hex": "#8B8889",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epla-plus-concrete",
+      "brand": "eSUN",
+      "type": "ePLA+",
+      "name": "Concrete",
+      "hex": "#9A9A93",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epla-plus-red",
+      "brand": "eSUN",
+      "type": "ePLA+",
+      "name": "Red",
+      "hex": "#C4402A",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epla-plus-fire-engine-red",
+      "brand": "eSUN",
+      "type": "ePLA+",
+      "name": "Fire Engine Red",
+      "hex": "#91202B",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epla-plus-brick-red",
+      "brand": "eSUN",
+      "type": "ePLA+",
+      "name": "Brick Red",
+      "hex": "#8B3A3A",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epla-plus-orange",
+      "brand": "eSUN",
+      "type": "ePLA+",
+      "name": "Orange",
+      "hex": "#EF7749",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epla-plus-coral-orange",
+      "brand": "eSUN",
+      "type": "ePLA+",
+      "name": "Coral Orange",
+      "hex": "#F5845A",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epla-plus-apricot",
+      "brand": "eSUN",
+      "type": "ePLA+",
+      "name": "Apricot",
+      "hex": "#F2AA7E",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epla-plus-yellow",
+      "brand": "eSUN",
+      "type": "ePLA+",
+      "name": "Yellow",
+      "hex": "#FBCE2B",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epla-plus-almond-yellow",
+      "brand": "eSUN",
+      "type": "ePLA+",
+      "name": "Almond Yellow",
+      "hex": "#D4BB80",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epla-plus-gold",
+      "brand": "eSUN",
+      "type": "ePLA+",
+      "name": "Gold",
+      "hex": "#C99B26",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epla-plus-grass-green",
+      "brand": "eSUN",
+      "type": "ePLA+",
+      "name": "Grass Green",
+      "hex": "#009952",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epla-plus-green",
+      "brand": "eSUN",
+      "type": "ePLA+",
+      "name": "Green",
+      "hex": "#015E58",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epla-plus-peak-green",
+      "brand": "eSUN",
+      "type": "ePLA+",
+      "name": "Peak Green",
+      "hex": "#A1DA7C",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epla-plus-jade-green",
+      "brand": "eSUN",
+      "type": "ePLA+",
+      "name": "Jade Green",
+      "hex": "#33C48F",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epla-plus-holly-green",
+      "brand": "eSUN",
+      "type": "ePLA+",
+      "name": "Holly Green",
+      "hex": "#3D7A3D",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epla-plus-pine-green",
+      "brand": "eSUN",
+      "type": "ePLA+",
+      "name": "Pine Green",
+      "hex": "#375C49",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epla-plus-olive-green",
+      "brand": "eSUN",
+      "type": "ePLA+",
+      "name": "Olive Green",
+      "hex": "#555B45",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epla-plus-mustard-green",
+      "brand": "eSUN",
+      "type": "ePLA+",
+      "name": "Mustard Green",
+      "hex": "#8B8B3A",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epla-plus-matcha-green",
+      "brand": "eSUN",
+      "type": "ePLA+",
+      "name": "Matcha Green",
+      "hex": "#8FB57A",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epla-plus-mint-green",
+      "brand": "eSUN",
+      "type": "ePLA+",
+      "name": "Mint Green",
+      "hex": "#A8D8C0",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epla-plus-blue",
+      "brand": "eSUN",
+      "type": "ePLA+",
+      "name": "Blue",
+      "hex": "#054795",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epla-plus-dark-blue",
+      "brand": "eSUN",
+      "type": "ePLA+",
+      "name": "Dark Blue",
+      "hex": "#2F314D",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epla-plus-light-blue",
+      "brand": "eSUN",
+      "type": "ePLA+",
+      "name": "Light Blue",
+      "hex": "#48BFD5",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epla-plus-aqua",
+      "brand": "eSUN",
+      "type": "ePLA+",
+      "name": "Aqua",
+      "hex": "#2EC4D4",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epla-plus-haze-blue",
+      "brand": "eSUN",
+      "type": "ePLA+",
+      "name": "Haze Blue",
+      "hex": "#8AAEC5",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epla-plus-soft-blue",
+      "brand": "eSUN",
+      "type": "ePLA+",
+      "name": "Soft Blue",
+      "hex": "#6B9FBF",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epla-plus-space-blue",
+      "brand": "eSUN",
+      "type": "ePLA+",
+      "name": "Space Blue",
+      "hex": "#1A3A5C",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epla-plus-purple",
+      "brand": "eSUN",
+      "type": "ePLA+",
+      "name": "Purple",
+      "hex": "#8350A4",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epla-plus-very-peri",
+      "brand": "eSUN",
+      "type": "ePLA+",
+      "name": "Very Peri",
+      "hex": "#6667AB",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epla-plus-lilac",
+      "brand": "eSUN",
+      "type": "ePLA+",
+      "name": "Lilac",
+      "hex": "#C9A0D0",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epla-plus-magenta",
+      "brand": "eSUN",
+      "type": "ePLA+",
+      "name": "Magenta",
+      "hex": "#DA3B6C",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epla-plus-pink",
+      "brand": "eSUN",
+      "type": "ePLA+",
+      "name": "Pink",
+      "hex": "#E78397",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epla-plus-soft-pink",
+      "brand": "eSUN",
+      "type": "ePLA+",
+      "name": "Soft Pink",
+      "hex": "#EFB8C8",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epla-plus-peach-pink",
+      "brand": "eSUN",
+      "type": "ePLA+",
+      "name": "Peach Pink",
+      "hex": "#F5C3B0",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epla-plus-brown",
+      "brand": "eSUN",
+      "type": "ePLA+",
+      "name": "Brown",
+      "hex": "#6F513C",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epla-plus-light-brown",
+      "brand": "eSUN",
+      "type": "ePLA+",
+      "name": "Light Brown",
+      "hex": "#A27556",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epla-plus-beige",
+      "brand": "eSUN",
+      "type": "ePLA+",
+      "name": "Beige",
+      "hex": "#ECCAB0",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epla-plus-light-beige",
+      "brand": "eSUN",
+      "type": "ePLA+",
+      "name": "Light Beige",
+      "hex": "#E8D9C5",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epla-plus-light-khaki",
+      "brand": "eSUN",
+      "type": "ePLA+",
+      "name": "Light Khaki",
+      "hex": "#C8BC96",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epla-plus-white",
+      "brand": "eSUN",
+      "type": "ePLA+",
+      "name": "White",
+      "hex": "#E1E9E9",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epla-matte-black",
+      "brand": "eSUN",
+      "type": "ePLA-Matte",
+      "name": "Black",
+      "hex": "#2E2E2E",
+      "finish": "matte"
+    },
+    {
+      "id": "esun-epla-matte-dark-grey",
+      "brand": "eSUN",
+      "type": "ePLA-Matte",
+      "name": "Dark Grey",
+      "hex": "#5A5A5A",
+      "finish": "matte"
+    },
+    {
+      "id": "esun-epla-matte-milky-white",
+      "brand": "eSUN",
+      "type": "ePLA-Matte",
+      "name": "Milky White",
+      "hex": "#E5E0D5",
+      "finish": "matte"
+    },
+    {
+      "id": "esun-epla-matte-concrete",
+      "brand": "eSUN",
+      "type": "ePLA-Matte",
+      "name": "Concrete",
+      "hex": "#9A9A93",
+      "finish": "matte"
+    },
+    {
+      "id": "esun-epla-matte-almond-yellow",
+      "brand": "eSUN",
+      "type": "ePLA-Matte",
+      "name": "Almond Yellow",
+      "hex": "#D4BB80",
+      "finish": "matte"
+    },
+    {
+      "id": "esun-epla-matte-tangerine",
+      "brand": "eSUN",
+      "type": "ePLA-Matte",
+      "name": "Tangerine",
+      "hex": "#E86B2C",
+      "finish": "matte"
+    },
+    {
+      "id": "esun-epla-matte-strawberry-red",
+      "brand": "eSUN",
+      "type": "ePLA-Matte",
+      "name": "Strawberry Red",
+      "hex": "#C53A30",
+      "finish": "matte"
+    },
+    {
+      "id": "esun-epla-matte-fire-engine-red",
+      "brand": "eSUN",
+      "type": "ePLA-Matte",
+      "name": "Fire Engine Red",
+      "hex": "#91202B",
+      "finish": "matte"
+    },
+    {
+      "id": "esun-epla-matte-peach-pink",
+      "brand": "eSUN",
+      "type": "ePLA-Matte",
+      "name": "Peach Pink",
+      "hex": "#FBEAEC",
+      "finish": "matte"
+    },
+    {
+      "id": "esun-epla-matte-morandi-purple",
+      "brand": "eSUN",
+      "type": "ePLA-Matte",
+      "name": "Morandi Purple",
+      "hex": "#C77B87",
+      "finish": "matte"
+    },
+    {
+      "id": "esun-epla-matte-lilac",
+      "brand": "eSUN",
+      "type": "ePLA-Matte",
+      "name": "Lilac",
+      "hex": "#CF9AD0",
+      "finish": "matte"
+    },
+    {
+      "id": "esun-epla-matte-matcha-green",
+      "brand": "eSUN",
+      "type": "ePLA-Matte",
+      "name": "Matcha Green",
+      "hex": "#7DAE6F",
+      "finish": "matte"
+    },
+    {
+      "id": "esun-epla-matte-morandi-green",
+      "brand": "eSUN",
+      "type": "ePLA-Matte",
+      "name": "Morandi Green",
+      "hex": "#33586C",
+      "finish": "matte"
+    },
+    {
+      "id": "esun-epla-matte-mint-green",
+      "brand": "eSUN",
+      "type": "ePLA-Matte",
+      "name": "Mint Green",
+      "hex": "#A8D8C0",
+      "finish": "matte"
+    },
+    {
+      "id": "esun-epla-matte-olive-green",
+      "brand": "eSUN",
+      "type": "ePLA-Matte",
+      "name": "Olive Green",
+      "hex": "#6B7044",
+      "finish": "matte"
+    },
+    {
+      "id": "esun-epla-matte-light-blue",
+      "brand": "eSUN",
+      "type": "ePLA-Matte",
+      "name": "Light Blue",
+      "hex": "#9ABDD4",
+      "finish": "matte"
+    },
+    {
+      "id": "esun-epla-matte-light-khaki",
+      "brand": "eSUN",
+      "type": "ePLA-Matte",
+      "name": "Light Khaki",
+      "hex": "#C8BC96",
+      "finish": "matte"
+    },
+    {
+      "id": "esun-epla-silk-black",
+      "brand": "eSUN",
+      "type": "ePLA-Silk",
+      "name": "Black",
+      "hex": "#2A2A2A",
+      "finish": "silk"
+    },
+    {
+      "id": "esun-epla-silk-white",
+      "brand": "eSUN",
+      "type": "ePLA-Silk",
+      "name": "White",
+      "hex": "#E3E0DB",
+      "finish": "silk"
+    },
+    {
+      "id": "esun-epla-silk-silver",
+      "brand": "eSUN",
+      "type": "ePLA-Silk",
+      "name": "Silver",
+      "hex": "#B5C1C5",
+      "finish": "silk"
+    },
+    {
+      "id": "esun-epla-silk-grey",
+      "brand": "eSUN",
+      "type": "ePLA-Silk",
+      "name": "Grey",
+      "hex": "#8C8C8C",
+      "finish": "silk"
+    },
+    {
+      "id": "esun-epla-silk-copper",
+      "brand": "eSUN",
+      "type": "ePLA-Silk",
+      "name": "Copper",
+      "hex": "#AE6B2F",
+      "finish": "silk"
+    },
+    {
+      "id": "esun-epla-silk-bronze",
+      "brand": "eSUN",
+      "type": "ePLA-Silk",
+      "name": "Bronze",
+      "hex": "#829172",
+      "finish": "silk"
+    },
+    {
+      "id": "esun-epla-silk-gold",
+      "brand": "eSUN",
+      "type": "ePLA-Silk",
+      "name": "Gold",
+      "hex": "#C48E2F",
+      "finish": "silk"
+    },
+    {
+      "id": "esun-epla-silk-dark-yellow",
+      "brand": "eSUN",
+      "type": "ePLA-Silk",
+      "name": "Dark Yellow",
+      "hex": "#D4A62E",
+      "finish": "silk"
+    },
+    {
+      "id": "esun-epla-silk-rose-gold",
+      "brand": "eSUN",
+      "type": "ePLA-Silk",
+      "name": "Rose Gold",
+      "hex": "#C7886B",
+      "finish": "silk"
+    },
+    {
+      "id": "esun-epla-silk-red",
+      "brand": "eSUN",
+      "type": "ePLA-Silk",
+      "name": "Red",
+      "hex": "#C94830",
+      "finish": "silk"
+    },
+    {
+      "id": "esun-epla-silk-orange",
+      "brand": "eSUN",
+      "type": "ePLA-Silk",
+      "name": "Orange",
+      "hex": "#D4692A",
+      "finish": "silk"
+    },
+    {
+      "id": "esun-epla-silk-brown",
+      "brand": "eSUN",
+      "type": "ePLA-Silk",
+      "name": "Brown",
+      "hex": "#8B5C2A",
+      "finish": "silk"
+    },
+    {
+      "id": "esun-epla-silk-pink",
+      "brand": "eSUN",
+      "type": "ePLA-Silk",
+      "name": "Pink",
+      "hex": "#E1708C",
+      "finish": "silk"
+    },
+    {
+      "id": "esun-epla-silk-violet",
+      "brand": "eSUN",
+      "type": "ePLA-Silk",
+      "name": "Violet",
+      "hex": "#B93CA1",
+      "finish": "silk"
+    },
+    {
+      "id": "esun-epla-silk-purple",
+      "brand": "eSUN",
+      "type": "ePLA-Silk",
+      "name": "Purple",
+      "hex": "#905295",
+      "finish": "silk"
+    },
+    {
+      "id": "esun-epla-silk-blue",
+      "brand": "eSUN",
+      "type": "ePLA-Silk",
+      "name": "Blue",
+      "hex": "#2A5FA8",
+      "finish": "silk"
+    },
+    {
+      "id": "esun-epla-silk-light-blue",
+      "brand": "eSUN",
+      "type": "ePLA-Silk",
+      "name": "Light Blue",
+      "hex": "#70B8D8",
+      "finish": "silk"
+    },
+    {
+      "id": "esun-epla-silk-cyan",
+      "brand": "eSUN",
+      "type": "ePLA-Silk",
+      "name": "Cyan",
+      "hex": "#34A7CF",
+      "finish": "silk"
+    },
+    {
+      "id": "esun-epla-silk-aqua",
+      "brand": "eSUN",
+      "type": "ePLA-Silk",
+      "name": "Aqua",
+      "hex": "#30B8C0",
+      "finish": "silk"
+    },
+    {
+      "id": "esun-epetg-black",
+      "brand": "eSUN",
+      "type": "ePETG",
+      "name": "Black",
+      "hex": "#353434",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epetg-white",
+      "brand": "eSUN",
+      "type": "ePETG",
+      "name": "White",
+      "hex": "#E8E8E5",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epetg-grey",
+      "brand": "eSUN",
+      "type": "ePETG",
+      "name": "Grey",
+      "hex": "#787878",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epetg-silver",
+      "brand": "eSUN",
+      "type": "ePETG",
+      "name": "Silver",
+      "hex": "#A8A8A8",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epetg-red",
+      "brand": "eSUN",
+      "type": "ePETG",
+      "name": "Red",
+      "hex": "#C4402A",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epetg-fire-engine-red",
+      "brand": "eSUN",
+      "type": "ePETG",
+      "name": "Fire Engine Red",
+      "hex": "#91202B",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epetg-orange",
+      "brand": "eSUN",
+      "type": "ePETG",
+      "name": "Orange",
+      "hex": "#E87030",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epetg-yellow",
+      "brand": "eSUN",
+      "type": "ePETG",
+      "name": "Yellow",
+      "hex": "#F0CA41",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epetg-green",
+      "brand": "eSUN",
+      "type": "ePETG",
+      "name": "Green",
+      "hex": "#008A58",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epetg-blue",
+      "brand": "eSUN",
+      "type": "ePETG",
+      "name": "Blue",
+      "hex": "#1A6FB4",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epetg-purple",
+      "brand": "eSUN",
+      "type": "ePETG",
+      "name": "Purple",
+      "hex": "#7A4795",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-epetg-clear",
+      "brand": "eSUN",
+      "type": "ePETG",
+      "name": "Clear",
+      "hex": "#F5F5F5",
+      "finish": "translucent",
+      "translucent": true
+    },
+    {
+      "id": "esun-epetg-translucent-blue",
+      "brand": "eSUN",
+      "type": "ePETG",
+      "name": "Translucent Blue",
+      "hex": "#3A8FC8",
+      "finish": "translucent",
+      "translucent": true
+    },
+    {
+      "id": "esun-epetg-translucent-green",
+      "brand": "eSUN",
+      "type": "ePETG",
+      "name": "Translucent Green",
+      "hex": "#3AA87A",
+      "finish": "translucent",
+      "translucent": true
+    },
+    {
+      "id": "esun-epetg-translucent-orange",
+      "brand": "eSUN",
+      "type": "ePETG",
+      "name": "Translucent Orange",
+      "hex": "#DD7135",
+      "finish": "translucent",
+      "translucent": true
+    },
+    {
+      "id": "esun-epetg-translucent-grey",
+      "brand": "eSUN",
+      "type": "ePETG",
+      "name": "Translucent Grey",
+      "hex": "#787B8B",
+      "finish": "translucent",
+      "translucent": true
+    },
+    {
+      "id": "esun-pla-basic-black",
+      "brand": "eSUN",
+      "type": "PLA-Basic",
+      "name": "Black",
+      "hex": "#373838",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-pla-basic-white",
+      "brand": "eSUN",
+      "type": "PLA-Basic",
+      "name": "White",
+      "hex": "#E1E9E9",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-pla-basic-cold-white",
+      "brand": "eSUN",
+      "type": "PLA-Basic",
+      "name": "Cold White",
+      "hex": "#E1E4E5",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-pla-basic-bone-white",
+      "brand": "eSUN",
+      "type": "PLA-Basic",
+      "name": "Bone White",
+      "hex": "#C2BAA7",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-pla-basic-red",
+      "brand": "eSUN",
+      "type": "PLA-Basic",
+      "name": "Red",
+      "hex": "#C4402A",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-pla-basic-fire-engine-red",
+      "brand": "eSUN",
+      "type": "PLA-Basic",
+      "name": "Fire Engine Red",
+      "hex": "#CC2323",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-pla-basic-blue",
+      "brand": "eSUN",
+      "type": "PLA-Basic",
+      "name": "Blue",
+      "hex": "#054795",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-pla-basic-dark-blue",
+      "brand": "eSUN",
+      "type": "PLA-Basic",
+      "name": "Dark Blue",
+      "hex": "#2F314D",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-pla-basic-light-blue",
+      "brand": "eSUN",
+      "type": "PLA-Basic",
+      "name": "Light Blue",
+      "hex": "#48BFD5",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-pla-basic-sky-blue",
+      "brand": "eSUN",
+      "type": "PLA-Basic",
+      "name": "Sky Blue",
+      "hex": "#7DC4E0",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-pla-basic-aqua",
+      "brand": "eSUN",
+      "type": "PLA-Basic",
+      "name": "Aqua",
+      "hex": "#00AACC",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-pla-basic-green",
+      "brand": "eSUN",
+      "type": "PLA-Basic",
+      "name": "Green",
+      "hex": "#015E58",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-pla-basic-holly-green",
+      "brand": "eSUN",
+      "type": "PLA-Basic",
+      "name": "Holly Green",
+      "hex": "#1A5C2A",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-pla-basic-olive-green",
+      "brand": "eSUN",
+      "type": "PLA-Basic",
+      "name": "Olive Green",
+      "hex": "#555B45",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-pla-basic-peak-green",
+      "brand": "eSUN",
+      "type": "PLA-Basic",
+      "name": "Peak Green",
+      "hex": "#A1DA7C",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-pla-basic-grey",
+      "brand": "eSUN",
+      "type": "PLA-Basic",
+      "name": "Grey",
+      "hex": "#5F6574",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-pla-basic-light-grey",
+      "brand": "eSUN",
+      "type": "PLA-Basic",
+      "name": "Light Grey",
+      "hex": "#A8ADB5",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-pla-basic-concrete-grey",
+      "brand": "eSUN",
+      "type": "PLA-Basic",
+      "name": "Concrete Grey",
+      "hex": "#909090",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-pla-basic-yellow",
+      "brand": "eSUN",
+      "type": "PLA-Basic",
+      "name": "Yellow",
+      "hex": "#FBCE2B",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-pla-basic-orange",
+      "brand": "eSUN",
+      "type": "PLA-Basic",
+      "name": "Orange",
+      "hex": "#EF7749",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-pla-basic-purple",
+      "brand": "eSUN",
+      "type": "PLA-Basic",
+      "name": "Purple",
+      "hex": "#8350A4",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-pla-basic-grape-purple",
+      "brand": "eSUN",
+      "type": "PLA-Basic",
+      "name": "Grape Purple",
+      "hex": "#5E2D82",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-pla-basic-pink",
+      "brand": "eSUN",
+      "type": "PLA-Basic",
+      "name": "Pink",
+      "hex": "#E78397",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-pla-basic-barbie-pink",
+      "brand": "eSUN",
+      "type": "PLA-Basic",
+      "name": "Barbie Pink",
+      "hex": "#E8207E",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-pla-basic-silver",
+      "brand": "eSUN",
+      "type": "PLA-Basic",
+      "name": "Silver",
+      "hex": "#8B8889",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-pla-basic-beige",
+      "brand": "eSUN",
+      "type": "PLA-Basic",
+      "name": "Beige",
+      "hex": "#ECCAB0",
+      "finish": "solid"
+    },
+    {
+      "id": "esun-pla-basic-brown",
+      "brand": "eSUN",
+      "type": "PLA-Basic",
+      "name": "Brown",
+      "hex": "#6F513C",
+      "finish": "solid"
     }
   ]
 }

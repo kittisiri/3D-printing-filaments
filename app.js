@@ -4,24 +4,24 @@
 
   /* Official store page for each filament type. Falls back to brand collection page. */
   const TYPE_STORE_URL = {
-    // Bambu Lab — bambulab.com/en-us/product/<slug>
-    "PLA Basic":            "https://bambulab.com/en-us/product/pla-basic-color",
-    "PLA Matte":            "https://bambulab.com/en-us/product/pla-matte",
-    "PLA Silk+":            "https://bambulab.com/en-us/product/pla-silk-plus",
-    "PLA Silk Multi-Color": "https://bambulab.com/en-us/product/pla-silk-multi-color",
-    "PLA-CF":               "https://bambulab.com/en-us/product/pla-cf",
-    "PLA Wood":             "https://bambulab.com/en-us/product/pla-wood",
-    "PLA Marble":           "https://bambulab.com/en-us/product/pla-marble",
-    "PLA Galaxy":           "https://bambulab.com/en-us/product/pla-galaxy",
-    "PLA Glow":             "https://bambulab.com/en-us/product/pla-glow",
-    "PLA Sparkle":          "https://bambulab.com/en-us/product/pla-sparkle",
-    "PLA Metal":            "https://bambulab.com/en-us/product/pla-metal",
-    "PLA Translucent":      "https://bambulab.com/en-us/product/pla-translucent",
-    "PLA Tough+":           "https://bambulab.com/en-us/product/pla-tough-plus",
-    "PETG Basic":           "https://bambulab.com/en-us/product/petg-basic",
-    "PETG HF":              "https://bambulab.com/en-us/product/petg-hf",
-    "PETG-CF":              "https://bambulab.com/en-us/product/petg-cf",
-    "PETG Translucent":     "https://bambulab.com/en-us/product/petg-translucent",
+    // Bambu Lab — us.store.bambulab.com/products/<slug>
+    "PLA Basic":            "https://us.store.bambulab.com/products/pla-basic-filament",
+    "PLA Matte":            "https://us.store.bambulab.com/products/pla-matte",
+    "PLA Silk+":            "https://us.store.bambulab.com/products/pla-silk-upgrade",
+    "PLA Silk Multi-Color": "https://us.store.bambulab.com/products/pla-silk-multi-color",
+    "PLA-CF":               "https://us.store.bambulab.com/products/pla-cf",
+    "PLA Wood":             "https://us.store.bambulab.com/products/pla-wood",
+    "PLA Marble":           "https://us.store.bambulab.com/products/pla-marble",
+    "PLA Galaxy":           "https://us.store.bambulab.com/products/pla-galaxy",
+    "PLA Glow":             "https://us.store.bambulab.com/products/pla-glow",
+    "PLA Sparkle":          "https://us.store.bambulab.com/products/pla-sparkle",
+    "PLA Metal":            "https://us.store.bambulab.com/products/pla-metal",
+    "PLA Translucent":      "https://us.store.bambulab.com/products/pla-translucent",
+    "PLA Tough+":           "https://us.store.bambulab.com/products/pla-tough-upgrade",
+    "PETG Basic":           "https://us.store.bambulab.com/products/petg-basic",
+    "PETG HF":              "https://us.store.bambulab.com/products/petg-hf",
+    "PETG-CF":              "https://us.store.bambulab.com/products/petg-cf",
+    "PETG Translucent":     "https://us.store.bambulab.com/products/petg-translucent",
     // Polymaker Panchroma — shop.polymaker.com/products/<slug>
     "Panchroma Basic PLA":               "https://shop.polymaker.com/products/panchroma-pla",
     "Panchroma Matte PLA":               "https://shop.polymaker.com/products/panchroma-matte",
@@ -51,11 +51,18 @@
     "Panchroma Gradient Starlight PLA":  "https://shop.polymaker.com/products/panchroma-gradient-starlight",
     "Panchroma Gradient Neon PLA":       "https://shop.polymaker.com/collections/panchroma-gradient-pla",
     "Panchroma Gradient Luminous PLA":   "https://shop.polymaker.com/collections/panchroma-gradient-pla",
+    // eSUN — esun3d.com
+    "PLA-Basic":  "https://www.esun3d.com/pla-basic-product/",
+    "ePLA+":      "https://www.esun3d.com/pla-pro-product/",
+    "ePLA-Matte": "https://www.esun3d.com/epla-matte-product/",
+    "ePLA-Silk":  "https://www.esun3d.com/esilk-pla-product/",
+    "ePETG":      "https://www.esun3d.com/petg-product/",
   };
 
   const BRAND_STORE_URL = {
-    "Bambu Lab":  "https://bambulab.com/en-us/filament",
+    "Bambu Lab":  "https://us.store.bambulab.com/collections/bambu-lab-3d-printer-filament",
     "Polymaker":  "https://shop.polymaker.com/collections/panchroma",
+    "eSUN":       "https://www.esun3d.com/filaments/",
   };
 
   function storeUrlFor(rec) {
@@ -109,6 +116,12 @@
     "PETG-CF":                               "CF",
     "PETG Translucent":                      "Translucent",
     "Panchroma CoPE (PETG-alt)":             "CoPE",
+    // eSUN
+    "PLA-Basic":  "Basic",
+    "ePLA+":      "Basic",
+    "ePLA-Matte": "Matte",
+    "ePLA-Silk":  "Silk",
+    "ePETG":      "Basic",
   };
 
   /* --- State --- */
@@ -224,7 +237,13 @@
   function fillTypeList(elemId, types) {
     const list = document.getElementById(elemId);
     list.innerHTML = "";
-    buildTypeGroups(types).forEach(({ group, rawTypes }) => {
+
+    const groups = buildTypeGroups(types);
+    const gradientGroups = groups.filter(g => g.group.startsWith("Gradient"));
+    const otherGroups   = groups.filter(g => !g.group.startsWith("Gradient"));
+
+    // Render non-gradient groups as flat checkboxes
+    otherGroups.forEach(({ group, rawTypes }) => {
       const count = state.filaments.filter(f => rawTypes.includes(f.type)).length;
       const allChecked = rawTypes.every(t => state.selectedTypes.has(t));
       list.appendChild(makeCheckbox({
@@ -239,6 +258,97 @@
         },
       }));
     });
+
+    // Render all gradient groups under a collapsible parent row
+    if (gradientGroups.length === 0) return;
+
+    const allGradRaw = gradientGroups.flatMap(g => g.rawTypes);
+    const totalCount = state.filaments.filter(f => allGradRaw.includes(f.type)).length;
+
+    function gradParentState() {
+      const all  = allGradRaw.every(t => state.selectedTypes.has(t));
+      const some = allGradRaw.some(t => state.selectedTypes.has(t));
+      return { all, some };
+    }
+
+    const li = document.createElement("li");
+
+    // Parent row: [label+checkbox] [chevron]
+    const row = document.createElement("div");
+    row.className = "group-row";
+
+    const lab = document.createElement("label");
+    lab.className = "group-label";
+
+    const cb = document.createElement("input");
+    cb.type = "checkbox";
+    cb.addEventListener("change", e => {
+      allGradRaw.forEach(t => {
+        if (e.target.checked) state.selectedTypes.add(t);
+        else state.selectedTypes.delete(t);
+      });
+      nested.querySelectorAll('input[type="checkbox"]').forEach(c => {
+        c.checked = e.target.checked;
+        c.indeterminate = false;
+      });
+      updateSelectAllState(elemId, types);
+      render();
+    });
+    const { all: initAll, some: initSome } = gradParentState();
+    cb.checked = initAll;
+    cb.indeterminate = !initAll && initSome;
+
+    const nameSpan = document.createElement("span");
+    nameSpan.textContent = "Gradient";
+
+    const numSpan = document.createElement("span");
+    numSpan.className = "count";
+    numSpan.textContent = totalCount;
+
+    lab.append(cb, nameSpan, numSpan);
+
+    const chevBtn = document.createElement("button");
+    chevBtn.type = "button";
+    chevBtn.className = "group-chevron";
+    chevBtn.setAttribute("aria-expanded", "false");
+    chevBtn.setAttribute("aria-label", "Expand gradient variants");
+    chevBtn.textContent = "▶";
+
+    chevBtn.addEventListener("click", () => {
+      const isOpen = nested.classList.toggle("open");
+      chevBtn.classList.toggle("open", isOpen);
+      chevBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    });
+
+    row.append(lab, chevBtn);
+    li.appendChild(row);
+
+    // Nested list of individual gradient sub-types
+    const nested = document.createElement("ul");
+    nested.className = "nested-checklist";
+
+    gradientGroups.forEach(({ group, rawTypes: subRaw }) => {
+      const subCount = state.filaments.filter(f => subRaw.includes(f.type)).length;
+      const subChecked = subRaw.every(t => state.selectedTypes.has(t));
+      const subLi = makeCheckbox({
+        label: group, count: subCount, checked: subChecked,
+        onChange: e => {
+          subRaw.forEach(t => {
+            if (e.target.checked) state.selectedTypes.add(t);
+            else state.selectedTypes.delete(t);
+          });
+          const { all: nowAll, some: nowSome } = gradParentState();
+          cb.checked = nowAll;
+          cb.indeterminate = !nowAll && nowSome;
+          updateSelectAllState(elemId, types);
+          render();
+        },
+      });
+      nested.appendChild(subLi);
+    });
+
+    li.appendChild(nested);
+    list.appendChild(li);
   }
 
   function updateSelectAllState(elemId, types) {
@@ -335,10 +445,15 @@
     // Filter sidebar toggle (mobile)
     const sidebar = document.getElementById("sidebar");
     const filterToggle = document.getElementById("filter-toggle");
+    function closeSidebar() {
+      sidebar.classList.remove("open");
+      filterToggle.setAttribute("aria-expanded", "false");
+    }
     filterToggle.addEventListener("click", () => {
       const open = sidebar.classList.toggle("open");
       filterToggle.setAttribute("aria-expanded", open ? "true" : "false");
     });
+    document.getElementById("sidebar-close").addEventListener("click", closeSidebar);
 
     // Range sliders
     bindRangeSlider("sat-min", "sat-max", "sat-fill", "sat-min-val", "sat-max-val",
@@ -437,7 +552,8 @@
     meta.className = "tile-meta";
     const brand = document.createElement("span");
     brand.className = "brand";
-    brand.textContent = rec.brand === "Bambu Lab" ? "Bambu" : "Polymaker";
+    const BRAND_SHORT = { "Bambu Lab": "Bambu", "Polymaker": "Polymaker", "eSUN": "eSUN" };
+    brand.textContent = BRAND_SHORT[rec.brand] || rec.brand;
     const type = document.createElement("span");
     type.className = "type";
     type.textContent = shortenType(rec.type);
